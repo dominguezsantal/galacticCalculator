@@ -2,16 +2,35 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import Triangle from './index.js';
+import AgeCalculator from './js/age-calculator.js';
+//import AgeExpectancy from './js/expectedAge.js';
+
 
 $(document).ready(function() {
-    $('#triangle-checker-form').submit(function(event) {
+    $("form#userInput").submit(function(event) {
         event.preventDefault();
-        const length1 = $('#length1').val();
-        const length2 = $('#length2').val();
-        const length3 = $('#length3').val();
-        const triangle = new Triangle(length1, length2, length3);
-        const response = triangle.checkType();
-        $('#response').append("<p>" + response + "</p>");
+        let age = $("#userAge").val();
+        let region = $("#region").val();
+        let gender = $("input:radio[name=gender]:checked").val();
+        let exercise = $("input:radio[name=exercise]:checked").val();
+        let alcohol = $("input:radio[name=alcohol]:checked").val();
+
+        let userInfo = new AgeExpectancy(age, region, gender, exercise, alcohol);
+
+        userInfo.regionCalculator();
+        userInfo.genderCalculator();
+        userInfo.exerciseCalculator();
+        userInfo.alcoholCalculator();
+        const userLifeExpectancy = userInfo.ageExpectancy;
+
+        let solarAge = new AgeCalculator(age, userLifeExpectancy);
+
+
+
+
+        $("#userInput").hide();
+        $(".button").hide();
+        $("#output").show();
+
     });
 });
