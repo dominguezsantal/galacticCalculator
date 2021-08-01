@@ -26,6 +26,8 @@ $(document).ready(function() {
         let solarAge = new AgeCalculator(age, userLifeExpectancy);
         solarAge.mercuryCalculator();
         solarAge.venusCalculator();
+        solarAge.marsCalculator();
+        solarAge.jupiterCalculator();
 
 
 

@@ -28,16 +28,10 @@ Test 1:
 Program returns the age variable in Mercury years. When it receives 30,	same amount. 
 Test 2: 
 Program returns the age variable in Venus years. When it receives 30, same amount. 
-
-
-
-
 ## GH Pages
 _https://dominguezsantal.github.io/galacticCalculator/
 
 ## Known Bugs
-
--n/a?
 
 ## Support and contact details
 Github: dominguezsantal
@@ -64,9 +58,6 @@ Github: dominguezsantal
 * webpack 4.39.3
 * webpack-cli 3.3.8
 * webpack-dev-server 3.11.2
-
-
-
 
 MIT License
 
