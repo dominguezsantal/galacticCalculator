@@ -32,6 +32,8 @@ $(document).ready(function() {
         $("#userInput").hide();
         $(".button").hide();
         $("#output").show();
+        $("#expectancy").text(userLifeExpectancy);
+        //$("#ageResult").text(ageResult);
 
     });
 });
