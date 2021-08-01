@@ -9,7 +9,9 @@ export default class AgeCalculator {
     mercuryCalculator() {
         return this.age * 0.24;
     }
-
+    venusCalculator() {
+        return this.age * 0.24;
+    }
 
     lifeCalculator() {
         if (this.age > this.expectancy) {
