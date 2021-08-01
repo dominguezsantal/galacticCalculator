@@ -10,7 +10,7 @@ export default class AgeCalculator {
         return this.age * 0.24;
     }
     venusCalculator() {
-        return this.age * 0.24;
+        return this.age * 0.62;
     }
 
     lifeCalculator() {
