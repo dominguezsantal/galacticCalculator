@@ -6,6 +6,10 @@ export default class AgeCalculator {
     earthCalculator() {
         return this.age * 1.0;
     }
+    mercuryCalculator() {
+        return this.age * 0.24;
+    }
+
 
     lifeCalculator() {
         if (this.age > this.expectancy) {

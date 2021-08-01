@@ -9,3 +9,11 @@ describe('AgeCalculator', () => {
         expect(newTest.earthCalculator()).toEqual(30);
     });
 });
+describe('AgeCalculator', () => {
+    test('should return the age in Mercury years', () => {
+        const age = 30;
+        const expectancy = 73;
+        const newTest = new AgeCalculator(age, expectancy);
+        expect(newTest.earthCalculator()).toEqual(30);
+    });
+});
