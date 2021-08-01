@@ -32,4 +32,24 @@ export default class AgeExpectancy {
             return this.ageExpectancy;
         }
     }
+    exerciseCalculator() {
+        if (this.exercise === "never") {
+            return this.ageExpectancy;
+        } else if (this.exercise === "sometimes") {
+            return this.ageExpectancy -= 4;
+        } else {
+            return this.ageExpectancy -= 13;
+        }
+    }
+
+    alcoholCalculator() {
+        if (this.alcohol === "never" || this.alcohol === "minimal") {
+            return this.ageExpectancy;
+        } else if (this.alcohol === "moderate") {
+            return this.ageExpectancy -= 2;
+        } else {
+            return this.ageExpectancy -= 5;
+        }
+    }
+
 }
