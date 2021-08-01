@@ -9,7 +9,7 @@ export default class AgeExpectancy {
     }
     regionCalculator() {
         if (this.region === "Americas") {
-            this.ageExpectancy = 79;
+            this.ageExpectancy = 73;
         } else if (this.region === "Africa") {
             this.ageExpectancy = 63;
         } else if (this.region === "Eastern Mediterranean") {
