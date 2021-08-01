@@ -1,22 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
     <title>galacticCalculator</title>
 </head>
 
 <body>
-    <h3>Enter three lengths to determine if they can make a triangle.</h3>
-    <form id="triangle-checker-form">
-        <label for="length1">Enter a number:</label>
-        <input id="length1" type="number">
-        <label for="length2">Enter a number:</label>
-        <input id="length2" type="number">
-        <label for="length3">Enter a number:</label>
-        <input id="length3" type="number">
-        <button type="submit">Submit</button>
-    </form>
-    <ul id="response"></ul>
+    <h2 class="title">Grandmaster's Galactic Calculator</h2>
+    <p class="subtitle">Find out how are you old in different planets of our solar system</p>
+    <div class="container">
+        <form id="userInput">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="header">Personal Info</h3>
+                    <label for="userAge" class="subheader">How old are you?</label>
+                    <input id="userAge" class="form-control" type="number">
+                    <h5 class="subheader">Region</h5>
+                    <select class="form-control" id="region">
+            <option disables selected value> -- Where do you live? --</option>
+            <option>Americas</option>
+            <option>Africa</option>
+            <option>Eastern Mediterranean</option>
+            <option>Europe</option>
+            <option>Western Pacific</option>
+            <option>South-East Asia</option>
+          </select>
+                    <h5 class="subheader">Gender</h5>
+                    <div class="radio">
+                        <label>
+              <input type="radio" name="gender" value="male">
+              male
+            </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+              <input type="radio" name="gender" value="female">
+              female
+            </label>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="header">Lifestyle</h3>
+                    <h5 class="subheader">Exercise</h5>
+                    <div class="radio">
+                        <label>
+              <input type="radio" name="exercise" value="never">
+              never or rarely exercise
+            </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+              <input type="radio" name="exercise" value="sometimes">
+              sometimes(1-2 days a week)
+            </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+              <input type="radio" name="exercise" value="heavy">
+              heavy (5 days a week or more)
+            </label>
+                    </div>
+                    <h5 class="subheader">Alcohol Tendencies</h5>
+                    <div class="radio">
+                        <label>
+              <input type="radio" name="alcohol" value="never">
+              zero drinks per week
+            </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+              <input type="radio" name="alcohol" value="minimal">
+              1-7 drinks per week
+            </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+              <input type="radio" name="alcohol" value="moderate">
+              8-15 drinks per week
+            </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+              <input type="radio" name="alcohol" value="heavy">
+              16 or more drinks per week
+            </label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="button">calculate solar years & life expectancy</button>
+        </form>
+    </div>
+    <span id="output">
+    <div class="row">
+      <div class="col-md-6">
+        <uL>
+          <li>In Mercury years you are <span id="mercuryAge"></span> years old.</li>
+    <li>In Venus years you are <span id="venusAge"></span> years old.</li>
+    <li>In Mars years you are <span id="marsAge"></span> years old.</li>
+    <li>In Jupiter years you are <span id="jupiterAge"></span> years old.</li>
+    <li>Based on your personal information and lifestyle habits, your life expectancy is <span id="expectancy"></span> years old. <span id="ageComment"></span></li>
+    </uL>
+    </div>
+    <div class="col-md-6">
+        <img src="assets/images/astronaut.gif" alt="astronuat gif">
+    </div>
+    </div>
+    <a href="index.html">return to home</a>
+    </span>
+
+
 </body>
 
 </html>
