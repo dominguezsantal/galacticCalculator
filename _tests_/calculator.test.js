@@ -1,5 +1,5 @@
 //import { TestScheduler } from 'jest';
-import AgeCalculator from './../src/js/age-calculator.js';
+import AgeCalculator from './../src/js/calculator.js';
 
 describe('AgeCalculator', () => {
     test('should return the age in Earth years', () => {

@@ -24,7 +24,7 @@ $(document).ready(function() {
         const userLifeExpectancy = userInfo.ageExpectancy;
 
         let solarAge = new AgeCalculator(age, userLifeExpectancy);
-
+        solarAge.mercuryCalculator();
 
 
 
