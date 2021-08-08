@@ -58,3 +58,27 @@ describe('AgeExpectancy', () => {
         expect(newTest.regionCalculator()).toEqual(78);
     });
 });
+describe('AgeExpectancy', () => {
+    test('should  return average life expectancy based on region', () => {
+        const age = 30;
+        const region = "South-East Asia";
+        const gender = "female";
+        const tobacco = "heavy";
+        const alcohol = "moderate";
+        const newTest = new AgeExpectancy(age, region, gender, tobacco, alcohol);
+        expect(newTest.regionCalculator()).toEqual(71);
+    });
+});
+
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on gender', () => {
+        const age = 30;
+        const region = "Americas";
+        const gender = "female";
+        const tobacco = "heavy";
+        const alcohol = "moderate";
+        const newTest = new AgeExpectancy(age, region, gender, tobacco, alcohol);
+        newTest.regionCalculator();
+        expect(newTest.genderCalculator()).toEqual(82);
+    });
+});
