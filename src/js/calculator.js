@@ -4,20 +4,21 @@ export default class AgeCalculator {
         this.expectancy = expectancy;
     }
     earthCalculator() {
-        return this.age * 1.0;
+        return Math.round(this.age * 1.0);
     }
     mercuryCalculator() {
-        return this.age * 0.24;
+        return Math.round(this.age * 0.24);
     }
     venusCalculator() {
-        return this.age * 0.62;
+        return Math.round(this.age * 0.62);
     }
     marsCalculator() {
-        return this.age * 1.88;
+        return Math.round(this.age * 1.88);
     }
     jupiterCalculator() {
-        return this.age * 11.86;
+        return Math.round(this.age * 11.86);
     }
+
 
     lifeCalculator() {
         if (this.age > this.expectancy) {
