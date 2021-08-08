@@ -46,6 +46,15 @@ describe('AgeCalculator', () => {
     });
 });
 
+describe('AgeCalculator', () => {
+    test('should return the number of years left to live on Earth if your age is less than average age expectancy', () => {
+        const age = 30;
+        const expectancy = 73;
+        const newTest = new AgeCalculator(age, expectancy);
+        expect(newTest.lifeCalculator()).toEqual('You have 43 years left to live before reaching average life expectancy on Earth.');
+    });
+});
+
 
 describe('AgeCalculator', () => {
     test('should return a message if your age equals average life expectancy', () => {
