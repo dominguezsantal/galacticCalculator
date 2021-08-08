@@ -15,7 +15,7 @@ export default class AgeExpectancy {
         } else if (this.region === "Eastern Mediterranean") {
             this.ageExpectancy = 70;
         } else if (this.region === "Europe") {
-            this.ageExpectancy = 70;
+            this.ageExpectancy = 78;
         } else if (this.region === "Western Pacific") {
             this.ageExpectancy = 78;
         } else {
