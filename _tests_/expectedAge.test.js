@@ -83,7 +83,7 @@ describe('AgeExpectancy', () => {
     });
 });
 describe('AgeExpectancy', () => {
-    test('should return average life expectancy based on tobacco use', () => {
+    test('should return average life expectancy based on exercise use', () => {
         const age = 30;
         const region = "Americas";
         const gender = "female";
@@ -92,13 +92,13 @@ describe('AgeExpectancy', () => {
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
         newTest.regionCalculator();
         newTest.genderCalculator();
-        expect(newTest.tobaccoCalculator()).toEqual(78);
+        expect(newTest.exerciseCalculator()).toEqual(78);
     });
 });
 
 
 describe('AgeExpectancy', () => {
-    test('should return average life expectancy based on tobacco use', () => {
+    test('should return average life expectancy based on exercise use', () => {
         const age = 30;
         const region = "Americas";
         const gender = "female";
@@ -107,6 +107,6 @@ describe('AgeExpectancy', () => {
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
         newTest.regionCalculator();
         newTest.genderCalculator();
-        expect(newTest.tobaccoCalculator()).toEqual(78);
+        expect(newTest.exerciseCalculator()).toEqual(78);
     });
 });
