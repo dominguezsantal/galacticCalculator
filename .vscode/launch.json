@@ -22,6 +22,60 @@
 			}
 		},
 		{
+			"name": "Debug Jest Tests",
+			"type": "node",
+			"request": "launch",
+			"runtimeArgs": [
+				"--inspect-brk",
+				"${workspaceRoot}/node_modules/.bin/jest",
+				"--runInBand"
+			  ],
+			"program": "${workspaceFolder}/node_modules/.bin/jest",
+			"port": 9229,
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"disableOptimisticBPs": true,
+			"windows": {
+				"program": "${workspaceFolder}/node_modules/jest/bin/jest"
+			}
+		},
+		{
+			"type": "node",
+			"name": "vscode-jest-tests",
+			"request": "launch",
+			"program": "${workspaceFolder}/node_modules/.bin/jest",
+			"args": [
+				"--runInBand",
+				"--watchAll=false"
+			],
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"disableOptimisticBPs": true,
+			//"windows": {
+				//"program": "${workspaceFolder}/node_modules/jest/bin/jest"
+			//}
+		},
+
+		{
+			"type": "node",
+			"name": "vscode-jest-tests",
+			"request": "launch",
+			"program": "${workspaceFolder}/node_modules/.bin/jest",
+			"args": [
+				"--runInBand",
+				"--watchAll=false"
+			],
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"disableOptimisticBPs": true,
+			"windows": {
+				"program": "${workspaceFolder}/node_modules/jest/bin/jest"
+			}
+		},
+		{
 			"type": "node",
 			"name": "vscode-jest-tests",
 			"request": "launch",
