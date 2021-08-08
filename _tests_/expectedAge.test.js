@@ -9,7 +9,7 @@ describe('AgeExpectancy', () => {
         const exercise = "heavy";
         const alcohol = "moderate";
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
-        expect(newTest.regionCalculator()).toEqual(73);
+        expect(newTest.regionCalculator()).toEqual(77);
     });
 });
 describe('AgeExpectancy', () => {
