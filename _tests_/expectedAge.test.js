@@ -17,7 +17,7 @@ describe('AgeExpectancy', () => {
         const age = 30;
         const region = "Africa";
         const gender = "female";
-        const exercise = "heavy";
+        const exercise = "sometimes";
         const alcohol = "moderate";
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
         expect(newTest.regionCalculator()).toEqual(64);
@@ -29,7 +29,7 @@ describe('AgeExpectancy', () => {
         const age = 30;
         const region = "Eastern Mediterranean";
         const gender = "female";
-        const exercise = "heavy";
+        const exercise = "sometimes";
         const alcohol = "moderate";
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
         expect(newTest.regionCalculator()).toEqual(70);
@@ -40,7 +40,7 @@ describe('AgeExpectancy', () => {
         const age = 30;
         const region = "Europe";
         const gender = "female";
-        const exercise = "heavy";
+        const exercise = "somemtimes";
         const alcohol = "moderate";
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
         expect(newTest.regionCalculator()).toEqual(78);
@@ -52,7 +52,7 @@ describe('AgeExpectancy', () => {
         const age = 30;
         const region = "Western Pacific";
         const gender = "female";
-        const exercise = "heavy";
+        const exercise = "sometimes";
         const alcohol = "moderate";
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
         expect(newTest.regionCalculator()).toEqual(78);
@@ -63,7 +63,7 @@ describe('AgeExpectancy', () => {
         const age = 30;
         const region = "South-East Asia";
         const gender = "female";
-        const exercise = "heavy";
+        const exercise = "sometimes";
         const alcohol = "moderate";
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
         expect(newTest.regionCalculator()).toEqual(71);
@@ -75,7 +75,7 @@ describe('AgeExpectancy', () => {
         const age = 30;
         const region = "Americas";
         const gender = "female";
-        const exercise = "heavy";
+        const exercise = "sometimes";
         const alcohol = "moderate";
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
         newTest.regionCalculator();
