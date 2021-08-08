@@ -24,18 +24,22 @@ $(document).ready(function() {
         const userLifeExpectancy = userInfo.ageExpectancy;
 
         let solarAge = new AgeCalculator(age, userLifeExpectancy);
-        solarAge.mercuryCalculator();
-        solarAge.venusCalculator();
-        solarAge.marsCalculator();
-        solarAge.jupiterCalculator();
-
+        let mercuryAge = solarAge.mercuryCalculator();
+        let venusAge = solarAge.venusCalculator();
+        let marsAge = solarAge.marsCalculator();
+        let jupiterAge = solarAge.jupiterCalculator();
+        const ageResult = solarAge.lifeCalculator();
 
 
         $("#userInput").hide();
         $(".button").hide();
         $("#output").show();
+        $("#mercuryAge").text(mercuryAge);
+        $("#venusAge").text(venusAge);
+        $("#marsAge").text(marsAge);
+        $("#jupiterAge").text(jupiterAge);
         $("#expectancy").text(userLifeExpectancy);
-        //$("#ageResult").text(ageResult);
+        $("#ageResult").text(ageResult);
 
     });
 });
