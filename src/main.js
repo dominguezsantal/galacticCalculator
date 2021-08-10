@@ -29,6 +29,7 @@ $(document).ready(function() {
         let marsAge = solarAge.marsCalculator();
         let jupiterAge = solarAge.jupiterCalculator();
         const ageResult = solarAge.lifeCalculator();
+        console.log(ageResult);
 
 
         $("#userInput").hide();
@@ -40,6 +41,6 @@ $(document).ready(function() {
         $("#jupiterAge").text(jupiterAge);
         $("#expectancy").text(userLifeExpectancy);
         $("#ageResult").text(ageResult);
-
+        $("#result").show();
     });
 });

@@ -13,3 +13,8 @@ body {
     font-size: medium;
     color: white;
 }
+
+#result {
+    display: none;
+    background-color: blue;
+}
