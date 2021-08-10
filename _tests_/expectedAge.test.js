@@ -26,7 +26,7 @@ describe('AgeExpectancy', () => {
         newTest.regionCalculator();
         newTest.genderCalculator();
         newTest.exerciseCalculator();
-        expect(newTest.alcoholCalculator()).toEqual(91);
+        expect(newTest.alcoholCalculator()).toEqual(71);
     });
 });
 
@@ -99,7 +99,7 @@ describe('AgeExpectancy', () => {
         newTest.regionCalculator();
         newTest.genderCalculator();
         newTest.exerciseCalculator();
-        expect(newTest.genderCalculator()).toEqual(79);
+        expect(newTest.alcoholCalculator()).toEqual(79);
     });
 });
 describe('AgeExpectancy', () => {
@@ -113,7 +113,7 @@ describe('AgeExpectancy', () => {
         newTest.regionCalculator();
         newTest.genderCalculator();
         newTest.exerciseCalculator();
-        expect(newTest.genderCalculator()).toEqual(62);
+        expect(newTest.alcoholCalculator()).toEqual(62);
     });
 });
 describe('AgeExpectancy', () => {
@@ -127,7 +127,7 @@ describe('AgeExpectancy', () => {
         newTest.regionCalculator();
         newTest.genderCalculator();
         newTest.exerciseCalculator();
-        expect(newTest.genderCalculator()).toEqual(65);
+        expect(newTest.alcoholCalculator()).toEqual(65);
     });
 });
 
@@ -143,7 +143,7 @@ describe('AgeExpectancy', () => {
         newTest.regionCalculator();
         newTest.genderCalculator();
         newTest.exerciseCalculator();
-        expect(newTest.exerciseCalculator()).toEqual(77);
+        expect(newTest.alcoholCalculator()).toEqual(77);
     });
 });
 
@@ -159,7 +159,7 @@ describe('AgeExpectancy', () => {
         newTest.regionCalculator();
         newTest.genderCalculator();
         newTest.exerciseCalculator();;
-        expect(newTest.exerciseCalculator()).toEqual(84);
+        expect(newTest.alcoholCalculator()).toEqual(84);
     });
 });
 
@@ -189,7 +189,7 @@ describe('AgeExpectancy', () => {
         newTest.regionCalculator();
         newTest.genderCalculator();
         newTest.exerciseCalculator();
-        expect(newTest.exerciseCalculator()).toEqual(88);
+        expect(newTest.alcoholCalculator()).toEqual(88);
     });
 });
 
@@ -204,7 +204,7 @@ describe('AgeExpectancy', () => {
         newTest.regionCalculator();
         newTest.genderCalculator();
         newTest.exerciseCalculator();
-        expect(newTest.exerciseCalculator()).toEqual(76);
+        expect(newTest.alcoholCalculator()).toEqual(76);
     });
 });
 
