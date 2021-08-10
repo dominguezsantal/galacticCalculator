@@ -350,6 +350,6 @@ describe('AgeExpectancy', () => {
         newTest.regionCalculator();
         newTest.genderCalculator();
         newTest.exerciseCalculator();
-        expect(newTest.alcoholCalculator()).toEqual(79);
+        expect(newTest.alcoholCalculator()).toEqual(75);
     });
 });
