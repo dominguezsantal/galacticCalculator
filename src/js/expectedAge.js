@@ -36,9 +36,9 @@ export default class AgeExpectancy {
         if (this.exercise === "never") {
             return this.ageExpectancy;
         } else if (this.exercise === "sometimes") {
-            return this.ageExpectancy -= 4;
+            return this.ageExpectancy += 4;
         } else {
-            return this.ageExpectancy -= 13;
+            return this.ageExpectancy += 13;
         }
     }
 

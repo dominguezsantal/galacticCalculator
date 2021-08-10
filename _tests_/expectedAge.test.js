@@ -1,6 +1,6 @@
 import AgeExpectancy from './../src/js/expectedAge.js';
 
-
+//region test
 describe('AgeExpectancy', () => {
     test('should  return average life expectancy based on region', () => {
         const age = 30;
@@ -9,7 +9,10 @@ describe('AgeExpectancy', () => {
         const exercise = "heavy";
         const alcohol = "moderate";
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
-        expect(newTest.regionCalculator()).toEqual(77);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.alcoholCalculator()).toEqual(93);
     });
 });
 describe('AgeExpectancy', () => {
@@ -20,7 +23,10 @@ describe('AgeExpectancy', () => {
         const exercise = "sometimes";
         const alcohol = "moderate";
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
-        expect(newTest.regionCalculator()).toEqual(64);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.alcoholCalculator()).toEqual(91);
     });
 });
 
@@ -32,7 +38,10 @@ describe('AgeExpectancy', () => {
         const exercise = "sometimes";
         const alcohol = "moderate";
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
-        expect(newTest.regionCalculator()).toEqual(70);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.alcoholCalculator()).toEqual(77);
     });
 });
 describe('AgeExpectancy', () => {
@@ -40,10 +49,13 @@ describe('AgeExpectancy', () => {
         const age = 30;
         const region = "Europe";
         const gender = "female";
-        const exercise = "somemtimes";
+        const exercise = "sometimes";
         const alcohol = "moderate";
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
-        expect(newTest.regionCalculator()).toEqual(78);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.alcoholCalculator()).toEqual(85);
     });
 });
 
@@ -55,7 +67,10 @@ describe('AgeExpectancy', () => {
         const exercise = "sometimes";
         const alcohol = "moderate";
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
-        expect(newTest.regionCalculator()).toEqual(78);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.alcoholCalculator()).toEqual(85);
     });
 });
 describe('AgeExpectancy', () => {
@@ -66,33 +81,69 @@ describe('AgeExpectancy', () => {
         const exercise = "sometimes";
         const alcohol = "moderate";
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
-        expect(newTest.regionCalculator()).toEqual(71);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.alcoholCalculator()).toEqual(78);
     });
 });
-
+//gender:male
 describe('AgeExpectancy', () => {
     test('should return average life expectancy based on gender', () => {
         const age = 30;
         const region = "Americas";
-        const gender = "female";
-        const exercise = "sometimes";
-        const alcohol = "moderate";
-        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
-        newTest.regionCalculator();
-        expect(newTest.genderCalculator()).toEqual(82);
-    });
-});
-describe('AgeExpectancy', () => {
-    test('should return average life expectancy based on exercise use', () => {
-        const age = 30;
-        const region = "Americas";
-        const gender = "female";
+        const gender = "male";
         const exercise = "sometimes";
         const alcohol = "moderate";
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
         newTest.regionCalculator();
         newTest.genderCalculator();
-        expect(newTest.exerciseCalculator()).toEqual(78);
+        newTest.exerciseCalculator();
+        expect(newTest.genderCalculator()).toEqual(79);
+    });
+});
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on gender', () => {
+        const age = 30;
+        const region = "Africa";
+        const gender = "male";
+        const exercise = "never";
+        const alcohol = "moderate";
+        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.genderCalculator()).toEqual(62);
+    });
+});
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on gender', () => {
+        const age = 30;
+        const region = "Eastern Mediterranean";
+        const gender = "male";
+        const exercise = "never";
+        const alcohol = "heavy";
+        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.genderCalculator()).toEqual(65);
+    });
+});
+
+//exercise
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on exercise use', () => {
+        const age = 30;
+        const region = "Americas";
+        const gender = "female";
+        const exercise = "never";
+        const alcohol = "heavy";
+        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.exerciseCalculator()).toEqual(77);
     });
 });
 
@@ -107,9 +158,57 @@ describe('AgeExpectancy', () => {
         const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
         newTest.regionCalculator();
         newTest.genderCalculator();
-        expect(newTest.exerciseCalculator()).toEqual(78);
+        newTest.exerciseCalculator();;
+        expect(newTest.exerciseCalculator()).toEqual(84);
     });
 });
+
+//male
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on exercise use', () => {
+        const age = 30;
+        const region = "Americas";
+        const gender = "male";
+        const exercise = "never";
+        const alcohol = "never";
+        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.exerciseCalculator()).toEqual(77);
+    });
+});
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on exercise use', () => {
+        const age = 30;
+        const region = "Americas";
+        const gender = "male";
+        const exercise = "heavy";
+        const alcohol = "moderate";
+        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.exerciseCalculator()).toEqual(88);
+    });
+});
+
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on exercise use', () => {
+        const age = 30;
+        const region = "Americas";
+        const gender = "male";
+        const exercise = "sometimes";
+        const alcohol = "heavy";
+        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.exerciseCalculator()).toEqual(76);
+    });
+});
+
+//alcohol
 describe('AgeExpectancy', () => {
     test('should return average life expectancy based on alcohol use', () => {
         const age = 30;
@@ -121,7 +220,7 @@ describe('AgeExpectancy', () => {
         newTest.regionCalculator();
         newTest.genderCalculator();
         newTest.exerciseCalculator();
-        expect(newTest.alcoholCalculator()).toEqual(69);
+        expect(newTest.alcoholCalculator()).toEqual(95);
     });
 });
 
@@ -136,6 +235,121 @@ describe('AgeExpectancy', () => {
         newTest.regionCalculator();
         newTest.genderCalculator();
         newTest.exerciseCalculator();
-        expect(newTest.alcoholCalculator()).toEqual(69);
+        expect(newTest.alcoholCalculator()).toEqual(95);
+    });
+});
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on alcohol use', () => {
+        const age = 30;
+        const region = "Americas";
+        const gender = "female";
+        const exercise = "heavy";
+        const alcohol = "moderate";
+        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.alcoholCalculator()).toEqual(93);
+    });
+});
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on alcohol use', () => {
+        const age = 30;
+        const region = "Americas";
+        const gender = "female";
+        const exercise = "heavy";
+        const alcohol = "heavy";
+        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.alcoholCalculator()).toEqual(90);
+    });
+});
+
+//male
+
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on alcohol use', () => {
+        const age = 30;
+        const region = "Americas";
+        const gender = "male";
+        const exercise = "never";
+        const alcohol = "heavy";
+        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.alcoholCalculator()).toEqual(72);
+    });
+});
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on alcohol use', () => {
+        const age = 30;
+        const region = "Americas";
+        const gender = "male";
+        const exercise = "heavy";
+        const alcohol = "heavy";
+        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.alcoholCalculator()).toEqual(85);
+    });
+});
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on alcohol use', () => {
+        const age = 30;
+        const region = "Americas";
+        const gender = "male";
+        const exercise = "sometimes";
+        const alcohol = "never";
+        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.alcoholCalculator()).toEqual(81);
+    });
+});
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on alcohol use', () => {
+        const age = 30;
+        const region = "Americas";
+        const gender = "male";
+        const exercise = "sometimes";
+        const alcohol = "moderate";
+        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.alcoholCalculator()).toEqual(79);
+    });
+});
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on alcohol use', () => {
+        const age = 30;
+        const region = "Americas";
+        const gender = "male";
+        const exercise = "sometimes";
+        const alcohol = "minimal";
+        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.alcoholCalculator()).toEqual(81);
+    });
+});
+describe('AgeExpectancy', () => {
+    test('should return average life expectancy based on alcohol use', () => {
+        const age = 30;
+        const region = "Americas";
+        const gender = "male";
+        const exercise = "never";
+        const alcohol = "moderate";
+        const newTest = new AgeExpectancy(age, region, gender, exercise, alcohol);
+        newTest.regionCalculator();
+        newTest.genderCalculator();
+        newTest.exerciseCalculator();
+        expect(newTest.alcoholCalculator()).toEqual(79);
     });
 });
